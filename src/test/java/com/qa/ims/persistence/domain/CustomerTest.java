@@ -10,5 +10,6 @@ public class CustomerTest {
 	public void testEquals() {
 		EqualsVerifier.simple().forClass(Customer.class).verify();
 	}
+	
 
 }
