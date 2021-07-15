@@ -54,7 +54,7 @@ public class OrderController implements CrudController<Order> {
 	public Order update() {
 		LOGGER.info("Please enter the id of the order you would like to update");
 		Long id = utils.getLong();
-		LOGGER.info("Please enter an order name");
+		LOGGER.info("Please enter an order na me");
 		String orderName = utils.getString();
 		LOGGER.info("Please enter an order status");
 		String orderStatus = utils.getString();
@@ -73,7 +73,14 @@ public class OrderController implements CrudController<Order> {
 		return orderDAO.delete(id);
 	}
 	
+	
+		
 	}
+	
+
+	
+	
+	
 
 		
 	

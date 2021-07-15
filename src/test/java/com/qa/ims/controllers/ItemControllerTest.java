@@ -29,26 +29,25 @@ public class ItemControllerTest {
 	@InjectMocks
 	private ItemController controller;
 
-	@Test
 	public void testCreate() {
-		final String item_Name = "Bat";
-		final String item_Type = "Tennis";
-		final Double price = 5.06;
-		final Item items = new Item(item_Name,item_Type,price);
+		final String itemName = "Boots";
+		final String itemType = "Football";
+		final Double price = 1.00;
+		final Item item = new Item(itemName,itemType, price);
 		
-		Mockito.when(utils.getString()).thenReturn(item_Name);
-		Mockito.when(utils.getString()).thenReturn(item_Type);
+		Mockito.when(utils.getString()).thenReturn(itemName);
+		Mockito.when(utils.getString()).thenReturn(itemName);
 		Mockito.when(utils.getDouble()).thenReturn(price);
-		Mockito.when(dao.create(items)).thenReturn(items);
+		Mockito.when(dao.create(item)).thenReturn(item);
 		
-		assertEquals(items,controller.create());
+		assertEquals(item,controller.create());
 		
 		Mockito.verify(utils, Mockito.times(1)).getString();
-		Mockito.verify(utils, Mockito.times(1)).getString();
-		Mockito.verify(utils, Mockito.times(1)).getDouble();
-		Mockito.verify(dao, Mockito.times(1)).create(items);
+		Mockito.verify(utils, Mockito.times(2)).getDouble();
+		Mockito.verify(dao, Mockito.times(1)).create(item);
 		
 	}
+	
 
 	@Test
 	public void testReadAll() {
