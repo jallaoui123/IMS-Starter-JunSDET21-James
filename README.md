@@ -1,5 +1,7 @@
 # IMS-Starter-JunSDET21-James
 
+Link to JIRA - https://james456.atlassian.net/jira/software/projects/IP2JA2/boards/3
+
 This is am inventory management system which will use JAVA and SQL
 
 These instructions will allow you to get the project up and working on a local computer
